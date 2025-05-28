@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mikiyas Portfolio</title>
+  <style>
+    /* Root colors */
+    :root {
+      --primary-color: #7c3aed; /* Vibrant Purple */
+      --secondary-color: #14b8a6; /* Teal */
+      --background-color: #1e1e2f; /* Dark blue-black */
+      --text-color: #e0e7ff; /* Soft light */
+      --accent-color: #ec4899; /* Pink */
+      --button-hover: #a78bfa; /* Light purple */
+    }
+
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.7;
+      font-size: 18px;
+      min-height: 100vh;
+    }
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: var(--secondary-color);
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      background: #2c2c47;
+      padding: 15px 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--accent-color);
+    }
+    header h1 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+    nav a {
+      margin-left: 25px;
+      font-weight: 600;
+      color: var(--text-color);
+    }
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px 80px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border-radius: 12px;
+      margin-bottom: 50px;
+      box-shadow: 0 8px 20px rgba(124, 58, 237, 0.5);
+    }
+    .hero h2 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+      font-weight: 900;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 650px;
+      margin: 0 auto;
+      font-weight: 600;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+
+    /* Section Titles */
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+      color: var(--primary-color);
+      border-bottom: 4px solid var(--accent-color);
+      display: inline-block;
+      padding-bottom: 8px;
+      font-weight: 700;
+    }
+
+    /* About Section */
+    #about {
+      background: #2c2c47;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(20,184,166,0.3);
+      color: #d1d5db; /* light gray */
+      line-height: 1.9;
+      font-size: 1.2rem;
+    }
+    #about p {
+      margin-bottom: 20px;
+      max-width: 750px;
+    }
+    #about strong {
+      color: var(--accent-color);
+    }
+
+    /* Contact Section */
+    #contact {
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+      color: var(--text-color);
+    }
+    #contact p {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+    }
+    .discord-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.5rem;
+      background: var(--primary-color);
+      padding: 12px 25px;
+      border-radius: 30px;
+      color: white;
+      font-weight: 700;
+      box-shadow: 0 5px 15px rgba(124, 58, 237, 0.6);
+      transition: background-color 0.3s ease;
+    }
+    .discord-link:hover {
+      background: var(--accent-color);
+      box-shadow: 0 6px 20px rgba(236, 72, 153, 0.8);
+    }
+    .discord-link i {
+      font-size: 1.8rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #a1a1aa;
+      font-size: 0.9rem;
+      margin-top: 60px;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 2.6rem;
+      }
+      nav a {
+        margin-left: 15px;
+        font-size: 1rem;
+      }
+      #about {
+        font-size: 1.1rem;
+      }
+      .discord-link {
+        font-size: 1.25rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+
+<header>
+  <h1>Mikiyas</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Hello, I'm Mikiyas</h2>
+  <p>
+    A passionate Grade 12 student and aspiring software developer from Ethiopia,
+    dedicated to learning, creating, and making a positive impact through technology.
+  </p>
+</section>
+
+<section id="about" class="container">
+  <h2>About Me</h2>
+  <p>
+    I am an enthusiastic learner with a strong passion for programming and software development. Currently, I am
+    in Grade 12, actively developing my skills in web and app development, and exploring the latest technologies.
+  </p>
+  <p>
+    I believe technology can change lives, and I am committed to building useful and innovative projects that solve real-world problems. 
+    I enjoy coding challenges, collaborating with others, and continuously improving my knowledge.
+  </p>
+  <p>
+    Besides programming, I am deeply connected to my community and culture, valuing traditions while embracing modern ideas. 
+    My journey is driven by curiosity, persistence, and the desire to contribute meaningfully to society.
+  </p>
+  <p>
+    <strong>My goal</strong> is to become a skilled software engineer who builds impactful software, learns constantly, and inspires others along the way.
+  </p>
+</section>
+
+<section id="contact" class="container">
+  <h2>Contact Me</h2>
+  <p>If you want to reach out or just say hello, you can find me on Discord:</p>
+  <a href="https://discord.com/users/@mikiyas1999" target="_blank" class="discord-link" rel="noopener noreferrer">
+    <i class="fab fa-discord"></i> 
+  </a>
+</section>
+
+<footer>
+  &copy; 2025 Mikiyas. All rights reserved.
+</footer>
+
+</body>
+</html>
